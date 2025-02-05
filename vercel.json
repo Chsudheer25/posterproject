@@ -1,4 +1,20 @@
 {
-    "builds":  [{ "src": "sample.py", "use": "@vercel/python" }],
-    "routes": [{ "src": "/(.*)", "dest": "/sample.py" }]
+  "builds": [
+    {
+      "src": "sample.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/sample.py"
+    }
+  ],
+  "functions": {
+    "sample.py": {
+      "maxDuration": 10,
+      "memory": 1024
+    }
+  }
 }
